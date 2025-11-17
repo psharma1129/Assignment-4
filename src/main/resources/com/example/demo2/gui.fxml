@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">  fx:controller="com.example.demo2.Controller" spacing="10" alignment="CENTER" prefWidth="320" prefHeight="240">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="20.0" prefHeight="358.0" prefWidth="222.0" spacing="45.0">
+            <children>
+                <Label text="Please choose one of the following">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Button mnemonicParsing="false" text="Create" />
+                <Button mnemonicParsing="false" text="Read" />
+                <Button mnemonicParsing="false" text="Update" />
+                <Button mnemonicParsing="false" text="Delete" />
+            </children>
+            <padding>
+                <Insets top="15.0" />
+            </padding>
+        </VBox>
+        <Line endX="5.600006103515625" endY="386.0000305175781" layoutX="232.0" layoutY="14.0" startX="5.600006103515625" startY="-14.000001907348633" />
+        <ListView fx:id="CharacterListView" layoutX="237.0" prefHeight="400.0" prefWidth="362.0" />
+        <Label fx:id="label2" layoutX="343.0" layoutY="53.0" text="Select your Horror Character" textAlignment="CENTER" />
+    </children>
+</AnchorPane>
