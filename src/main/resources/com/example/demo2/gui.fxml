@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- Replace file: src/main/resources/com/example/demo2/gui.fxml -->
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.demo2.Controller"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.Controller">
     <children>
-        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="20.0" prefHeight="358.0" prefWidth="222.0" spacing="45.0">
+        <HBox layoutX="10.0" layoutY="10.0" spacing="20.0" prefWidth="580.0">
             <children>
-                <Label text="Please choose one of the following">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <Button mnemonicParsing="false" text="Create" />
-                <Button mnemonicParsing="false" text="Read" />
-                <Button mnemonicParsing="false" text="Update" />
-                <Button mnemonicParsing="false" text="Delete" />
+                <VBox alignment="TOP_CENTER" prefWidth="180.0" spacing="10.0">
+                    <children>
+                        <Label text="Please choose one of the following" />
+                        <Button fx:id="btnCreate" mnemonicParsing="false" onAction="#addButtonClicked" text="Create" />
+                        <Button fx:id="btnRead" mnemonicParsing="false" onAction="#readButtonClicked" text="Read" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateButtonClicked" text="Update" />
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteButtonClicked" text="Delete" />
+                    </children>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </VBox>
+
+                <VBox spacing="8.0" prefWidth="380.0">
+                    <children>
+                        <HBox spacing="8.0">
+                            <Label text="Name:" minWidth="60.0"/>
+                            <TextField fx:id="txtCharacterName" prefWidth="280.0"/>
+                        </HBox>
+                        <HBox spacing="8.0">
+                            <Label text="Weakness:" minWidth="60.0"/>
+                            <TextField fx:id="txtWeakness" prefWidth="280.0"/>
+                        </HBox>
+                        <HBox spacing="8.0" alignment="CENTER_LEFT">
+                            <CheckBox fx:id="chkTransformation" text="Transformed" />
+                        </HBox>
+                        <ListView fx:id="CharacterListView" prefHeight="280.0" prefWidth="360.0" />
+                        <Label fx:id="label2" text="Select your Horror Character" />
+                        <Label fx:id="label1" text="" />
+                    </children>
+                </VBox>
             </children>
-            <padding>
-                <Insets top="15.0" />
-            </padding>
-        </VBox>
-        <Line endX="5.600006103515625" endY="386.0000305175781" layoutX="232.0" layoutY="14.0" startX="5.600006103515625" startY="-14.000001907348633" />
-        <ListView fx:id="CharacterListView" layoutX="237.0" prefHeight="400.0" prefWidth="362.0" />
-        <Label fx:id="label2" layoutX="343.0" layoutY="53.0" text="Select your Horror Character" textAlignment="CENTER" />
+        </HBox>
     </children>
 </AnchorPane>
