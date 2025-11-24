@@ -36,7 +36,7 @@ public class Controller implements Initializable {
         CharacterListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
         horrorCharacter[] monsters = {
-                new horrorCharacter("Zombies", "Rotting flesh", false),
+                new horrorCharacter("Zombies", "Fire", false),
                 new horrorCharacter("Vampires", "Sunlight", true),
                 new horrorCharacter("Werewolves", "Silver", true)
         };
